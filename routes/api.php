@@ -14,8 +14,5 @@ use App\Http\Controllers\CalculateController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::resource('/v1/reservation', ReservationController::class)->only([
-    'index','show','store', 'update', 'destroy','calculate'
-]);
-
+Route::resource('/v1/reservation', ReservationController::class)->only(['index','show','store', 'update', 'destroy']);
 Route::get('/v1/reservation/{id}/calculate', [CalculateController::class, 'calculate']);
