@@ -84,14 +84,4 @@ class ReservationController extends Controller
         $reservation->delete();
         return response()->json(["message" => trans('reservation deleted'), "code" => "200"], 200);
     }
-
-    public function calculate($id)
-    {
-        $reservation = Reservation::find($id);
-        if (!$reservation) {
-            return response()->json(["message" => "reservation not found!", "code" => "404"], 404);
-        }
-        $days = $reservation->package()->number_of_days;
-        echo $days;
-    }
 }

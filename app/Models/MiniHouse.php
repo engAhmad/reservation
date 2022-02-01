@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class MiniHouse extends Model
 {
     use HasFactory;
-        
     /**
      * Get the reservation that owns the MiniHouse.
      */

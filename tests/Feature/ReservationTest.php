@@ -3,17 +3,15 @@
 namespace Tests\Feature;
 
 use App\Models\Reservation;
-
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
-
 use Tests\TestCase;
 
 class ReservationTest extends TestCase
 {
     use RefreshDatabase;
     /**
-     * A basic feature test example.
+     * Test to create reservation using api end point
      *
      * @return void
      */
